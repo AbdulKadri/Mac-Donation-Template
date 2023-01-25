@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="location">
+    <div class="content">
+
+        <div class="left-side"></div>
+
+        <div class="right-side">
+            <section class="header">
+                <img src="./images/Mac-logo.svg" alt="Mac Logo">
+            </section>
+
+            <section class="body">
+                <h4>Locations Near You</h4>
+
+                <form class="options">
+                    <label class="choice">
+                        <input type="radio" name="locationChoice" value="Masjid Toronto" checked>
+                        <p>Masjid Toronto</p>
+                    </label>
+
+                    <label class="choice">
+                        <input type="radio" name="locationChoice" value="ICCO">
+                        <p>ICCO</p>
+                    </label>
+
+                    <label class="choice">
+                        <input type="radio" name="locationChoice" value="Head Office 1">
+                        <p>Head Office 1</p>
+                    </label>
+
+                    <label class="choice">
+                        <input type="radio" name="locationChoice" value="Head Office 2">
+                        <p>Head Office 2</p>
+                    </label>
+
+                    <label class="choice" id="search">
+                        <input type="radio" name="locationChoice">
+                        <input type="search" list="cities" id="otherLocations" placeholder="Custom Search">
+                    </label>
+                </form>
+
+                <a href="cause.html" class="next-page"><button class="next-btn">Next</button></a>
+            </section>
+        </div>
+
+    </div>
+    
+</body>
+</html>

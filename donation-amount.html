@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Amount</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="donation-amount">
+    <div class="content">
+
+        <div class="left-side"></div>
+
+        <div class="right-side">
+            <section class="header">
+                <img src="./images/Mac-logo.svg" alt="Mac Logo">
+            </section>
+
+            <section class="body">
+                <h4>Donation Amount</h4>
+
+                <form class="options">
+                    <div class="frequency">
+                        <label class="selection-1">
+                            <input type="radio" name="donationFrequency" value="One-Time" checked>
+                            <p>One-Time</p>
+                        </label>
+
+                        <label class="selection-1">
+                            <input type="radio" name="donationFrequency" value="Monthly">
+                            <p>Monthly</p>
+                        </label>
+                    </div>
+
+                    <label class="selection-2">
+                        <input type="radio" name="donationChoice" value="$100" checked>
+                        <p>$100</p>
+                    </label>
+
+                    <label class="selection-2">
+                        <input type="radio" name="donationChoice" value="$500">
+                        <p>$500</p>
+                    </label>
+
+                    <label class="selection-2">
+                        <input type="radio" name="donationChoice" value="$1000">
+                        <p>$1000</p>
+                    </label>
+
+                    <label class="selection-2">
+                        <input type="radio" name="donationChoice" value="$2500">
+                        <p>$2500</p>
+                    </label>
+
+                    <label class="selection-2">
+                        <input type="radio" name="donationChoice" value="$3000">
+                        <p>$3000</p>
+                    </label>
+
+                    <label class="selection-2">
+                        <input type="radio" name="donationChoice" value="Custom Amount">
+                        <input type="number" id="custom-amount" placeholder="Custom Amount">
+                    </label>
+
+                    <label class="selection-3" id="customDonation">
+                        <input type="radio" name="donationChoice">
+                        <input type="number" id="otherChoice" placeholder="$100/One-Time">
+                    </label>
+                </form>
+
+                <a href="#" class="next-page"><button class="next-btn">Next</button></a>
+            </section>
+        </div>
+
+    </div>
+    
+</body>
+</html>

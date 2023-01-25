@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: white;
+    width: 100vw;
+}
+
+.content {
+    display: flex;
+}
+
+.left-side {
+    display: none;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    align-self: center;
+    margin-top: 93px;
+}
+
+.header > img {
+    width: 541px;
+    height: 67px;
+}
+
+.body {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.body > h4 {
+    font-size: 35px;
+    font-weight: 500;
+    margin: 66px 0 51px;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: #9A9A9A;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.choice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 40%;
+    width: 275px;
+    height: 71px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 15.5px 3.5px;
+    box-shadow: 0px 0px 30px 0px rgba(154, 154, 154, 0.75);
+}
+
+#search {
+    width: 503px;
+    margin-top: 33px;
+    flex-basis: 70%;
+}
+
+#search > input[type='search'],
+input[type='number'] {
+    text-align: center;
+}
+
+#search > input[type='search'],
+#customDonation > input[type='search'],
+input[type='number'] {
+    outline: none;
+    border: none;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+input[type='search']::placeholder,
+input[type='number']::placeholder {
+    color: #9A9A9A;
+}
+
+#search > input[type='search']:checked
+input[type='number']:checked {
+    outline: none;
+    border: none;
+}
+
+input[type='radio'] { 
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    visibility:hidden;
+    position: absolute;
+}
+
+.selection-2 > input[type='number'] {
+    font-size: 12px;
+    width: 80%;
+}
+
+input[type="radio"]:checked {
+    accent-color: black;
+    visibility:hidden;
+}
+
+.choice:has(input[type="radio"]:checked),
+input[type="radio"]:checked + #otherLocations, 
+input[type="radio"]:checked + p,
+input[type="radio"]:checked + input[type='search']::placeholder,
+input[type="radio"]:checked + #otherChoice,
+input[type="radio"]:checked + #custom-amount,
+.selection-1:has(input[type="radio"]:checked), 
+.selection-2:has(input[type="radio"]:checked),
+.selection-3:has(input[type="radio"]:checked),
+input[type="radio"]:checked + input[type='number']::placeholder {
+    color: white;
+    background-color: #24874E;
+}
+
+.content a {
+    margin: 50px 0 130px;
+}
+
+.next-btn {
+    font-weight: 700;
+    font-size: 25px;
+    border: none;
+    text-decoration: none;
+    background-color: #24874E;
+    color: white;
+    width: 300px;
+    height: 68px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cause .choice {
+    margin: 18.5px 11.5px;
+}
+
+.frequency {
+    flex-basis: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    width: 426px;
+    height: 57px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #24874E;
+    background:linear-gradient(#24874E,#24874E) center/1px 100% no-repeat;
+    margin-bottom: 33px;
+}
+
+.selection-1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.selection-1:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.selection-1:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+.selection-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 24%;
+    width: 139px;
+    height: 51px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 18px 21px;
+    box-shadow: 0px 0px 30px 0px rgba(154, 154, 154, 0.75);
+}
+
+.selection-3 {
+    display: flex;
+    align-items: center;
+    width: 453px;
+    height: 66px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #24874E;
+    padding-left: 25px;
+    margin-top: 29px;
+}
+
+#otherChoice {
+    text-align: left;
+}
+
+@media (min-width:700px) {
+    .left-side {
+        display: inline;
+        background-image: url(./images/Background-image.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;
+        width: 100%;
+        height: 1024px;
+    }
+
+    .right-side {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .next-btn {
+        width: 434px;
+    }
+}
