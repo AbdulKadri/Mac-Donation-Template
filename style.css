@@ -27,10 +27,12 @@ body {
 .header {
     align-self: center;
     margin-top: 50px;
+    display: flex;
+    justify-content: center;
 }
 
 .header > img {
-    width: 541px;
+    width: 100%;
     height: 67px;
 }
 
@@ -234,6 +236,10 @@ input:focus::placeholder {
     .right-side {
         width: 100%;
         height: 100vh;
+    }
+
+    .header > img {
+        width: 541px;
     }
 
     .next-btn {
