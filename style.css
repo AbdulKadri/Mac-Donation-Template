@@ -12,6 +12,7 @@ body {
 
 .content {
     display: flex;
+    height: 100%;
 }
 
 .left-side {
@@ -25,7 +26,7 @@ body {
 
 .header {
     align-self: center;
-    margin-top: 93px;
+    margin-top: 50px;
 }
 
 .header > img {
@@ -43,7 +44,7 @@ body {
 .body > h4 {
     font-size: 35px;
     font-weight: 500;
-    margin: 66px 0 51px;
+    margin: 30px 0;
 }
 
 .options {
@@ -133,8 +134,12 @@ input[type="radio"]:checked + input[type='number']::placeholder {
     background-color: #24874E;
 }
 
+input:focus::placeholder {
+    color: transparent;
+}
+
 .content a {
-    margin: 50px 0 130px;
+    margin: 30px 0;
 }
 
 .next-btn {
@@ -202,7 +207,7 @@ input[type="radio"]:checked + input[type='number']::placeholder {
 .selection-3 {
     display: flex;
     align-items: center;
-    width: 453px;
+    width: 80%;
     height: 66px;
     cursor: pointer;
     background-color: transparent;
@@ -213,6 +218,7 @@ input[type="radio"]:checked + input[type='number']::placeholder {
 
 #otherChoice {
     text-align: left;
+    width: 90%;
 }
 
 @media (min-width:700px) {
@@ -223,7 +229,6 @@ input[type="radio"]:checked + input[type='number']::placeholder {
         background-size: cover;
         background-position: 50%;
         width: 100%;
-        height: 1024px;
     }
 
     .right-side {
