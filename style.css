@@ -255,7 +255,7 @@ input:focus::placeholder {
 .checkout-form {
     display: flex;
     justify-content: center;
-    height: 70%;
+    height: 100%;
 }
 
 .card-titles {
@@ -446,6 +446,7 @@ hr {
     }
 
     .checkout-form {
+        height: 70%;
         overflow: scroll;
     }
 }
