@@ -256,7 +256,6 @@ input:focus::placeholder {
     display: flex;
     justify-content: center;
     height: 70%;
-    overflow: scroll;
 }
 
 .card-titles {
@@ -343,6 +342,7 @@ hr {
     width: 201px;
     height: 64px;
     border-radius: 56px;
+    margin-bottom: 20px;
     cursor: pointer;
 }
 
@@ -443,5 +443,9 @@ hr {
     #postal-zip {
         flex: 0 0 auto;
         width: 50%;
+    }
+
+    .checkout-form {
+        overflow: scroll;
     }
 }
