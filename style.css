@@ -26,13 +26,13 @@ body {
 
 .header {
     align-self: center;
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
 }
 
 .header > img {
-    width: 100%;
+    width: 80%;
     height: 67px;
 }
 
@@ -355,6 +355,10 @@ hr {
     .right-side {
         width: 100%;
         height: 100vh;
+    }
+
+    .header {
+        margin-top: 50px;
     }
 
     .header > img {
