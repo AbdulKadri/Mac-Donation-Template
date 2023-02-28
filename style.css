@@ -20,8 +20,8 @@ body {
 }
 
 .right-side {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    min-height: 100%;
 }
 
 .header {
@@ -32,8 +32,8 @@ body {
 }
 
 .header > img {
-    width: 80%;
-    height: 67px;
+    width: 70%;
+    height: auto;
 }
 
 .body {
@@ -44,9 +44,15 @@ body {
 }
 
 .body > h4 {
-    font-size: 35px;
+    width: 80%;
+    font-size: 1.5rem;
     font-weight: 500;
     margin: 30px 0;
+    text-align: center;
+}
+
+.logo-colour {
+    color: #24874E;
 }
 
 .options {
@@ -56,20 +62,21 @@ body {
     align-items: center;
     color: #9A9A9A;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1rem;
+    text-align: center;
 }
 
 .choice {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
     flex-basis: 40%;
-    width: 275px;
+    padding: 8px;
+    width: 150px;
     height: 71px;
     cursor: pointer;
-    border-radius: 5px;
-    margin: 15.5px 3.5px;
+    border-radius: 10px;
+    margin: 10px;
     box-shadow: 0px 0px 30px 0px rgba(154, 154, 154, 0.75);
     position: relative;
 }
@@ -96,6 +103,7 @@ input[type='number'] {
 input[type='text']::placeholder,
 input[type='number']::placeholder {
     color: #9A9A9A;
+    font-size: 0.9rem;
 }
 
 #search > input[type='text']:checked
@@ -124,20 +132,23 @@ input[type="radio"]:checked {
 
 .choice:has(input[type="radio"]:checked),
 input[type="radio"]:checked + #otherLocations, 
+input[type="radio"]:checked + svg path,
 input[type="radio"]:checked + p,
-input[type="radio"]:checked + ::placeholder,
+input[type="radio"]:checked + ::placeholder, 
 .selection-1:has(input[type="radio"]:checked), 
 .selection-2:has(input[type="radio"]:checked) {
     color: white;
     background-color: #24874E;
+    fill: white;
 }
 
-input:focus::placeholder {
+input:focus::placeholder,
+input[type="radio"]:checked + :focus::placeholder {
     color: transparent;
 }
 
 .content a {
-    margin: 30px 0;
+    margin: 50px 0;
 }
 
 .next-btn {
@@ -147,24 +158,68 @@ input:focus::placeholder {
     text-decoration: none;
     background-color: #24874E;
     color: white;
-    width: 300px;
+    width: 200px;
     height: 68px;
     border-radius: 10px;
     cursor: pointer;
 }
 
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.note {
+    padding: 30px 0;
+}
+
+.note,
+.PS {
+    width: 75%;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.PS {
+    padding-bottom: 10px;
+}
+
+.socials-container {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    column-gap: 1rem;
+}
+
+.social-wrapper {
+    cursor: pointer;
+}
+
 .cause .choice {
-    margin: 18.5px 11.5px;
+    display: grid;
+    grid-template-columns: 30% 70%;
     text-align: center;
 }
 
+.cause .choice svg,
+.cause .choice p  {
+    justify-self: center;
+}
+
 .frequency {
-    flex-basis: 80%;
+    flex-basis: 75%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: center;
-    width: 426px;
     height: 57px;
     border-radius: 10px;
     cursor: pointer;
@@ -195,11 +250,11 @@ input:focus::placeholder {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-basis: 24%;
-    width: 139px;
+    flex-basis: 33%;
     height: 51px;
+    padding: 3px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
     margin: 0 18px 21px;
     box-shadow: 0px 0px 30px 0px rgba(154, 154, 154, 0.75);
     position: relative;
@@ -209,12 +264,22 @@ input:focus::placeholder {
 .selection-3 {
     display: flex;
     align-items: center;
-    width: 80%;
+    width: 75%;
     height: 66px;
+    border-radius: 10px;
     background-color: transparent;
     border: 1px solid #24874E;
     padding-left: 25px;
-    margin-top: 29px;
+    margin-top: 10px;
+}
+
+.summary {
+    color: black;
+    width: 75%;
+    text-align: left;
+    margin: 20px 0 -30px;
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 #otherChoice {
@@ -254,6 +319,10 @@ input:focus::placeholder {
     flex-wrap: wrap;
 }
 
+.personal-section {
+    margin-bottom: 20px;
+}
+
 .CC-Con,
 .P-Con {
     display: flex;
@@ -264,6 +333,13 @@ input:focus::placeholder {
     padding: 0 0.3rem;
     font-size: 20px;
     font-weight: 400;
+}
+
+.choice:hover,
+.selection-2:hover,
+.CC-Con:focus-within,
+.P-Con:focus-within {
+    border: 2px #24874E solid;
 }
 
 .CC-Con > img,
@@ -338,14 +414,64 @@ hr {
     width: 100%;
 }
 
-@media (min-width:768px) {
+/* Tablet */
+@media (min-width:769px) and (max-width:1024px) {
+    body {
+        height: 100vh;
+    }
+
+    .body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        min-height: 100%;
+    }
+
+    .body > h4 {
+        font-size: 2.5rem;
+    }
+
+    .content:not(.payment-information .content) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header:not(.payment-information .header) {
+        margin-top: 0;
+    }
+
+    .choice {
+        margin: 20px;
+    }
+
+    .next-btn {
+        width: 434px;
+    }
+
+    .footer {
+        row-gap: 0;
+    }
+
+    .note {
+        padding: 0;
+    }
+
+    .selection-2 {
+        flex-basis: 22%;
+    }
+}
+
+
+/* Desktop */
+@media (min-width:1025px) {
     body {
         overflow: hidden;
     }
 
     .left-side {
         display: inline;
-        background-image: url(./images/Background-image.png);
+        background-image: url(./images/Masjid-Toronto.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 50%;
@@ -357,20 +483,45 @@ hr {
         height: 100vh;
     }
 
-    .header {
-        margin-top: 50px;
+    .header > img {
+        width: 60%;
     }
 
-    .header > img {
-        width: 541px;
+    .body > h4 {
+        font-size: 2rem;
+        margin: 20px 0;
     }
 
     #search {
         width: 503px;
     }
 
+    .content a {
+        margin: 30px 0 20px;
+    }
+
+    .summary {
+        margin: 15px 0 -15px;
+    }
+
     .next-btn {
         width: 434px;
+    }
+
+    .footer {
+        row-gap: .2rem;
+    }
+
+    .note {
+        padding: 0;
+    }
+
+    .cause .choice {
+        grid-template-columns: 20% 80%;
+    }
+
+    .selection-2 {
+        flex-basis: 22%;
     }
 
     .credit-card-section > .card-titles,
