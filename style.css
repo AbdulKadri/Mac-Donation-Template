@@ -45,9 +45,9 @@ body {
 
 .body > h4 {
     width: 80%;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 500;
-    margin: 30px 0;
+    margin: 60px 0;
     text-align: center;
 }
 
@@ -64,6 +64,7 @@ body {
     font-weight: 700;
     font-size: 1rem;
     text-align: center;
+    min-width: 100%;
 }
 
 .choice {
@@ -72,7 +73,6 @@ body {
     justify-content: center;
     flex-basis: 40%;
     padding: 8px;
-    width: 150px;
     height: 71px;
     cursor: pointer;
     border-radius: 10px;
