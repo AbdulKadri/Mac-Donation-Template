@@ -16,127 +16,146 @@
         <div class="left-side"></div>
 
         <div class="right-side">
-            <section class="header">
-                <img src="./images/Mac-logo.svg" alt="Mac Logo">
-            </section>
+            <div class="top-wrapper">
+                <section class="login-wrapper">
+                    <button class="login-btn">Login</button>
+                </section>
 
-            <section class="container">
+                <section class="header">
+                    <img src="./images/Mac-logo.svg" alt="Mac Logo">
+                </section>
+
+                <div class="breadcrumbs-wrapper">
+                    <p class="breadcrumb"> <a href="./index.html"> Location&nbsp; </a> </p>
+                    <p>/&nbsp;</p>
+                    <p class="breadcrumb"> <a href="./cause.html"> Cause&nbsp; </a> </p>
+                    <p>/&nbsp;</p>
+                    <p class="breadcrumb"><a href="./donation-amount.html"> Amount&nbsp; </a> </p>
+                    <p>/&nbsp;</p>
+                    <p class="breadcrumb current-page">Payment</p>
+                </div>
+
+                <div class="donation-summary">
+                    <p class="donation-summary-header">Donation Amount</p>
+                    <h2 class="donation-summary-amount">$500/One-Time</h2>
+                    <p class="donation-summary-footer">Masjid Toronto - Parking Lot Reno</p>
+                </div>
+            </div>
+
+            <div class="google-pay-wrapper">
+                <button><img src="./images/google-pay.svg" alt="google logo"></button>
+            </div>
+
+            <div class="card-payment">
+                <p> <span> Or pay with card </span></p>
+            </div>
+
+            <section class="checkout-form-container">
                 <div class="checkout-form">
                     <form action="" method="post" id="payment-form">
                         <div class="credit-card-section">
-                            <h5 class="card-titles">Credit Card Information</h5>
+                            <h5 class="card-titles">Payment Details</h5>
                             <div class="credit-card-containers">
                                 <div class="top-form-group" id="card-name">
+                                    <label for="cardHolderName" class="card-label">Name on card</label>
                                     <div class="CC-Con">
-                                        <img src="./images/frame.svg" alt="">
-                                        <input type="text" class="input-info" placeholder="Card Holder Name">
+                                        <input type="text" class="input-info" id="cardHolderName">
                                     </div>
                                 </div>
                                 <div class="top-form-group" id="card-number">
+                                    <label for="cardNumber" class="card-label">Card number</label>
                                     <div class="CC-Con">
-                                        <img src="./images/cards.svg" alt="">
-                                        <input type="text" class="input-info" placeholder="Card Number">
+                                        <input type="text" class="input-info" id="cardNumber">
                                     </div>
                                 </div>
                                 <div class="top-form-group" id="card-exp">
+                                    <label for="expiration" class="card-label">Expiration</label>
                                     <div class="CC-Con">
-                                        <img src="./images/stickynote.svg" alt="">
-                                        <input type="text" class="input-info" placeholder="MM/YY">
+                                        <input type="text" class="input-info" id="expiration" placeholder="MM">
+                                        <input type="text" class="input-info" placeholder="YY">
                                     </div>
                                 </div>
                                 <div class="top-form-group" id="card-cvv">
+                                    <div id="CVV-info">
+                                        <label for="CVV" class="card-label">CVV</label>
+                                        <img src="./images/question-mark.svg" alt="Question-mark" width="22" height="22" 
+                                        title="The CVV is the 3-digit security code on the back of your card.">                               
+                                    </div>
                                     <div class="CC-Con">
-                                        <img src="./images/key.svg" alt="">
-                                        <input type="text" class="input-info" placeholder="CVV">
+                                        <input type="text" class="input-info" id="CVV">
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="personal-section">
-                            <h5 class="card-titles">Your Details</h5>
+                            <h5 class="card-titles">Donor Details</h5>
                             <div class="personal-containers">
                                 <div class="bottom-form-group" id="first-name">
+                                    <label for="firstName" class="card-label">First Name</label>
                                     <div class="P-Con">
-                                        <img src="./images/frame.svg" alt="">
-                                        <input type="text" class="input-info" placeholder="First Name">
+                                        <input type="text" class="input-info" id="firstName">
                                     </div>
                                 </div>
                                 <div class="bottom-form-group" id="last-name">
+                                    <label for="lastName" class="card-label">Last Name</label>
                                     <div class="P-Con">
-                                        <img src="./images/frame.svg" alt="">
-                                        <input type="text" class="input-info" placeholder="Last Name">
+                                        <input type="text" class="input-info" id="lastName">
                                     </div>
                                 </div>
                                 <div class="bottom-form-group" id="email">
+                                    <label for="emailInput" class="card-label">Email</label>
                                     <div class="P-Con">
-                                        <img src="./images/email.svg" alt="">
-                                        <input type="text" class="input-info" placeholder="Email *" required>
+                                        <input type="text" class="input-info" id="emailInput" required>
                                     </div>
                                 </div>
                                 <div class="bottom-form-group" id="phone">
+                                    <label for="phoneInput" class="card-label">Phone #</label>
                                     <div class="P-Con">
-                                        <img src="./images/calling.svg" alt="">
-                                        <input type="text" class="input-info" placeholder="Phone *" required>
+                                        <input type="text" class="input-info" id="phoneInput" required>
                                     </div>
                                 </div>
                                 <div class="bottom-form-group" id="organization">
+                                    <label for="organizationInput" class="card-label">Organization/Company</label>
                                     <div class="P-Con">
-                                        <img src="./images/organization.svg" alt="">
-                                        <input type="text" class="input-info" placeholder="Organization">
+                                        <input type="text" class="input-info" id="organizationInput">
                                     </div>
                                 </div>
                                 <div class="bottom-form-group" id="address-1">
+                                    <label for="addressInput-1" class="card-label">Address 1</label>
                                     <div class="P-Con">
-                                        <img src="./images/address.svg" alt="">
-                                        <input type="text" class="input-info" placeholder="Adress 1">
+                                        <input type="text" class="input-info" id="addressInput-1">
                                     </div>
                                 </div>
                                 <div class="bottom-form-group" id="address-2">
+                                    <label for="addressInput-2" class="card-label">Address 2</label>
                                     <div class="P-Con">
-                                        <img src="./images/address.svg" alt="">
-                                        <input type="text" class="input-info" placeholder="Adress 2">
+                                        <input type="text" class="input-info" id="addressInput-2">
                                     </div>
                                 </div>
                                 <div class="bottom-form-group" id="country">
+                                    <label for="countryInput" class="card-label">Country</label>
                                     <div class="P-Con">
-                                        <img src="./images/global.svg" alt="">
-                                        <input type="text" class="input-info" placeholder="Country">
+                                        <input type="text" class="input-info" id="countryInput">
                                     </div>
                                 </div>
                                 <div class="bottom-form-group" id="city">
+                                    <label for="cityInput" class="card-label">City</label>
                                     <div class="P-Con">
-                                        <img src="./images/map.svg" alt="">
-                                        <input type="text" class="input-info" placeholder="City">
+                                        <input type="text" class="input-info" id="cityInput">
                                     </div>
                                 </div>
                                 <div class="bottom-form-group" id="province-state">
+                                    <label for="provinceStateInput" class="card-label">Province/State</label>
                                     <div class="P-Con">
-                                        <img src="./images/province-state.svg" alt="">
-                                        <input type="text" class="input-info" placeholder="Province/State">
+                                        <input type="text" class="input-info" id="provinceStateInput">
                                     </div>
                                 </div>
                                 <div class="bottom-form-group" id="postal-zip">
+                                    <label for="postalCodeInput" class="card-label">Postal Code</label>
                                     <div class="P-Con">
-                                        <img src="./images/postal-zip.svg" alt="">
-                                        <input type="text" class="input-info" placeholder="Postal Code/Zip">
+                                        <input type="text" class="input-info" id="postalCodeInput">
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="amount-section">
-                                <div class="contribution">
-                                    <p>Zakat - RCIC</p>
-                                    <p>$1500</p>
-                                </div>
-                            </div>
-
-                            <hr>
-
-                            <div class="total-section">
-                                <div class="total-amount">
-                                    <p>Total</p>
-                                    <p>$1500</p>
                                 </div>
                             </div>
                         </div>
@@ -144,6 +163,39 @@
                         <div class="donate-section">
                             <button id="donate-btn"> Donate </button>
                         </div>
+
+                        <section class="footer">
+                            <div class="note">
+                                <p>Thank you for your interest in supporting the Muslim Association of Canada. When you give to MAC, you are funding life-changing programs that help thousands of children, youth and families across Canada. MAC relies on the generosity of all Canadians to support our work.</p>
+                            </div>
+            
+                            <div class="socials-container">
+                                <ul class="socials">
+                                    <li class="social-wrapper">
+                                        <a href="#" target="_blank">
+                                            <img src="./images/Facebook.svg" alt="Facebook">
+                                        </a>
+                                    </li>
+                                    <li class="social-wrapper">
+                                        <a href="#" target="_blank">
+                                            <img src="./images/Twitter.svg" alt="Twitter">
+                                        </a>
+                                    </li><li class="social-wrapper">
+                                        <a href="#" target="_blank">
+                                            <img src="./images/Instagram.svg" alt="Instagram">
+                                        </a>
+                                    </li><li class="social-wrapper">
+                                        <a href="" target="_blank">
+                                            <img src="./images/YouTube.svg" alt="Youtube">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+            
+                            <div class="PS">
+                                <p>Registered Charity No.</p>
+                            </div>
+                        </section>
 
                     </form>
                 </div>
